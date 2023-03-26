@@ -92,13 +92,13 @@
     $(window).on('elementor/frontend/init', function () {
         if (elementorFrontend.isEditMode()) {
             elementorFrontend.hooks.addAction('frontend/element_ready/global', ShyinuAddonsGlobal);
-            elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-slideshow.default', ShyinuAddonsSldeShow);
-            elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-projectpresale.default', ShyinuAddonsProject);
+            //elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-slideshow.default', ShyinuAddonsSldeShow);
+            //elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-projectpresale.default', ShyinuAddonsProject);
         }
         else {
             elementorFrontend.hooks.addAction('frontend/element_ready/global', ShyinuAddonsGlobal);
-            elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-slideshow.default', ShyinuAddonsSldeShow);
-            elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-projectpresale.default', ShyinuAddonsProject);
+            //elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-slideshow.default', ShyinuAddonsSldeShow);
+            //elementorFrontend.hooks.addAction('frontend/element_ready/shyinuaddons-projectpresale.default', ShyinuAddonsProject);
         }
     });
 console.log('addon js loaded');

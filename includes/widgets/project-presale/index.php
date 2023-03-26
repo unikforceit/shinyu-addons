@@ -32,7 +32,7 @@ class shyinuaddons_projectpresale extends Widget_Base
         $this->start_controls_section(
             'content_section',
             [
-                'label' => __('Project Presale', 'shyinuaddons'),
+                'label' => __('Content', 'shyinuaddons'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -56,16 +56,15 @@ class shyinuaddons_projectpresale extends Widget_Base
     protected function render()
     {
         $settings = $this->get_settings_for_display();
-        $my_current_lang = apply_filters( 'wpml_current_language', NULL );
         $page_id = $settings['select_page'];
         ?>
         <section class="project-presale d-none d-lg-block">
             <div class="container">
                 <h2 class="section-title text-center"><?php pll_e('Pre-sale projects'); ?></h2>
                 <p class="section-description text-center"><?php pll_e('Shinyu collects quality projects exclusively for you along with special promotions'); ?></p>
-                <?php if (have_rows('_page_home_project', $page_id)) : ?>
+                <?php if (have_rows('_page_home_project')) : ?>
                     <?php $i = 0; ?>
-                    <?php while (have_rows('_page_home_project', $page_id)) : the_row(); ?>
+                    <?php while (have_rows('_page_home_project')) : the_row(); ?>
                         <?php $images = get_sub_field('gallery', false, false); ?>
                         <div class="project-presale-item">
                             <div class="columns is-gapless<?php if ($i % 2 != 0) echo ' is-flex-direction-row-reverse' ?>">
