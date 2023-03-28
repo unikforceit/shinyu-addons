@@ -1,4 +1,4 @@
-.elementor-3674 .elementor-element, .elementor-21703 .elementor-element {
+.elementor-element.e-con-full.e-con {
   padding: 0;
 }
 
@@ -10,6 +10,16 @@
   margin-top: 0;
   padding: 0;
   background: transparent;
+}
+
+@media screen and (max-width: 991px) {
+  .search-box.custom-global-search {
+    display: block;
+  }
+}
+
+.search-bar.custom-global-search input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=global.css.map */
