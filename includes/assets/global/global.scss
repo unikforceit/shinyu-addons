@@ -1,3 +1,12 @@
 .elementor-3674 .elementor-element, .elementor-21703 .elementor-element {
   padding: 0;
 }
+.search-box.global-search{
+  background-image: none;
+  padding: 0;
+  .search-box-item {
+    margin-top: 0;
+    padding: 0;
+    background: transparent;
+  }
+}

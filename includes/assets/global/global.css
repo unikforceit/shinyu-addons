@@ -2,4 +2,14 @@
   padding: 0;
 }
 
+.search-box.global-search {
+  background-image: none;
+  padding: 0;
+}
+.search-box.global-search .search-box-item {
+  margin-top: 0;
+  padding: 0;
+  background: transparent;
+}
+
 /*# sourceMappingURL=global.css.map */

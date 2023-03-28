@@ -3,17 +3,17 @@
 namespace Elementor;
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-class shyinuaddons_unitspecial extends Widget_Base
+class shyinuaddons_globalsearch extends Widget_Base
 {
 
     public function get_name()
     {
-        return 'shyinuaddons-unitspecial';
+        return 'shyinuaddons-globalsearch';
     }
 
     public function get_title()
     {
-        return __('Unit special Addons', 'shyinuaddons');
+        return __('Global Search Addons', 'shyinuaddons');
     }
 
     public function get_categories()
@@ -57,19 +57,26 @@ class shyinuaddons_unitspecial extends Widget_Base
     {
         $settings = $this->get_settings_for_display();
         $slideshow = $settings['select_page'];
-        $my_current_lang = apply_filters('wpml_current_language', NULL);
         ?>
-        <section class="unit-special">
-            <div class="container">
-                <h2 class="text-center">
-                    <?php if($my_current_lang == 'th'){ echo('ยูนิตคัดพิเศษ'); } elseif($my_current_lang == 'ja'){ echo('おすすめ物件'); } else{ echo('Special Units'); } ?>
-                    <small>
-                        <?php if($my_current_lang == 'th'){ echo('ชินยู นำมาให้คุณได้เลือกก่อนใคร'); } elseif($my_current_lang == 'ja'){ echo(''); } else{ echo('Special Units for you to choose'); } ?>
-                    </small>
-                </h2>
-                <div class="unit-special-app"><unit-special></unit-special></div>
-            </div>
-        </section>
+       <section class="search-box global-search">
+           <div class="search-box-item">
+               <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <div class="autocomplete control">
+                        <div class="control is-medium is-clearfix">
+                            <div class="columns">
+                                <div class="column is-10">
+                                    <input type="search" class="search-field input is-medium" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder', 'your-text-domain' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                                </div>
+                                <div class="column is-2">
+                                    <button type="submit" class="search-submit button is-medium is-danger"><span><?php echo _x( 'Search', 'submit button', 'shyinuaddons' ); ?></span></button>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+               </form>
+           </div>
+       </section>
+
         <?php
     }
 
@@ -84,5 +91,5 @@ class shyinuaddons_unitspecial extends Widget_Base
 
 }
 
-Plugin::instance()->widgets_manager->register(new shyinuaddons_unitspecial());
+Plugin::instance()->widgets_manager->register(new shyinuaddons_globalsearch());
 ?>
