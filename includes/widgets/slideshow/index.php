@@ -58,7 +58,7 @@ class shyinuaddons_slideshow extends Widget_Base
         $settings = $this->get_settings_for_display();
         $slideshow = $settings['select_page'];
         ?>
-<!--        <section class="search-bar is-relative d-lg-none"><search-bar></search-bar></section>-->
+        <!--        <section class="search-bar is-relative d-lg-none"><search-bar></search-bar></section>-->
         <section class="slideshow is-loading">
             <div class="swiper-container slideshow-swiper-container">
                 <div class="swiper-wrapper">
@@ -94,21 +94,26 @@ class shyinuaddons_slideshow extends Widget_Base
                 </div>
             </div>
         </section>
-<!--        <section class="search-box">-->
-<!--            <search-box></search-box>-->
-<!--        </section>-->
+        <!--        <section class="search-box">-->
+        <!--            <search-box></search-box>-->
+        <!--        </section>-->
         <section class="search-box custom-global-search">
             <div class="search-box-item">
                 <div class="container">
-                    <form role="search" method="get" class="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                    <form role="search" method="get" class="search-form" action="<?php echo esc_url(home_url('/')); ?>">
                         <div class="autocomplete control">
+                            <?php shinyu_cs_filter();?>
                             <div class="control is-medium is-clearfix">
                                 <div class="columns">
                                     <div class="column is-10">
-                                        <input type="search" class="search-field input is-medium" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder', 'your-text-domain' ); ?>" value="<?php echo get_search_query(); ?>" name="s" />
+                                        <input type="search" class="search-field input is-medium"
+                                               placeholder="<?php echo esc_attr_x('Search …', 'placeholder', 'your-text-domain'); ?>"
+                                               value="<?php echo get_search_query(); ?>" name="s"/>
                                     </div>
                                     <div class="column is-2">
-                                        <button type="submit" class="search-submit button is-medium is-danger"><span><?php echo _x( 'Search', 'submit button', 'shyinuaddons' ); ?></span></button>
+                                        <button type="submit" class="search-submit button is-medium is-danger">
+                                            <span><?php echo _x('Search', 'submit button', 'shyinuaddons'); ?></span>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -121,11 +126,13 @@ class shyinuaddons_slideshow extends Widget_Base
     }
 
 
-    protected function content_template()
+    protected
+    function content_template()
     {
     }
 
-    public function render_plain_content($instance = [])
+    public
+    function render_plain_content($instance = [])
     {
     }
 

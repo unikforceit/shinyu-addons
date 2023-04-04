@@ -14,8 +14,28 @@
   @media screen and (max-width: 991px){
     display: block;
   }
+  .cs-filter-top {
+    margin-bottom: 30px;
+  }
+  label.b-radio {
+    display: flex;
+  }
+  span.control-label {
+    margin: 0 15px;
+    text-transform: capitalize;
+  }
 }
 .search-bar.custom-global-search{
+  .cs-filter-top {
+    margin-bottom: 30px;
+  }
+  label.b-radio {
+    display: flex;
+  }
+  span.control-label {
+    margin: 0 15px;
+    text-transform: capitalize;
+  }
   input{
     width: 100%;
   }

@@ -17,7 +17,27 @@
     display: block;
   }
 }
+.search-box.custom-global-search .cs-filter-top {
+  margin-bottom: 30px;
+}
+.search-box.custom-global-search label.b-radio {
+  display: flex;
+}
+.search-box.custom-global-search span.control-label {
+  margin: 0 15px;
+  text-transform: capitalize;
+}
 
+.search-bar.custom-global-search .cs-filter-top {
+  margin-bottom: 30px;
+}
+.search-bar.custom-global-search label.b-radio {
+  display: flex;
+}
+.search-bar.custom-global-search span.control-label {
+  margin: 0 15px;
+  text-transform: capitalize;
+}
 .search-bar.custom-global-search input {
   width: 100%;
 }
